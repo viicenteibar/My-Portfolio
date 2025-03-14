@@ -159,8 +159,25 @@ nav ul li a{
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.15,.68,.89,.61);
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
 }
+.services-css figure img{
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+.services-js figure img{
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+/* keyframes */
+
 @keyframes float{
     0%{
         transform: translateY(-5%);
@@ -168,7 +185,22 @@ nav ul li a{
     100%{
         transform: translateY(5%);
     }
-
+}
+@keyframes scale{
+    0%{
+        transform: scale(.75);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
 }
 
 /* service section overrides */
@@ -208,10 +240,11 @@ background: var(--color1);
     font-size: 80px;
     color: var(--color6);
     font-weight: bold;
-    transition: 1s;
+    transition: 2s cubic-bezier(.77,.28,.42,.93);
 }
 .contact a:hover{
     color: var(--color5);
+    filter:blur(20px);
 }
 
 /* responsive */
