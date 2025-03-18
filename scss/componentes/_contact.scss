@@ -1,0 +1,16 @@
+.contact{
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient($color1, $color3 60%, $color2 70%, $color4);
+    border-radius: nth($border-radius, 1);
+    a{
+        font-size: 80px;
+        color: $color6;
+        font-weight: bold;
+        transition: 2s cubic-bezier(.77,.28,.42,.93);
+        &:hover{
+            color: $color5;
+            filter:blur(20px);
+        }
+    }
+}

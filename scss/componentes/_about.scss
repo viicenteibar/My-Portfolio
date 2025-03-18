@@ -1,0 +1,31 @@
+.about{
+    .empty{
+        flex-basis: 37.5vw;
+        background-color: $color4;
+        border-radius: nth($border-radius, 1);
+        transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+    }
+    article{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .title{
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            background-color: $color1;
+            border-radius: nth($border-radius, 1);
+            padding: nth($gutter, 1);
+            transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+        }
+        .description{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: $color2;
+            border-radius: nth($border-radius, 1);
+            padding: nth($gutter, 1);
+            color: $color6;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@media only screen and (max-width: 768px){
+    html, body{
+        border-radius: nth($border-radius, 2);
+        padding: nth($gutter, 2);
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    nav{
+        ul{
+            li{
+                margin-left: 25px;
+            }
+        }
+    }
+    .services{
+        article{
+            flex-direction: column;
+        }
+        figure{
+            flex-basis: 25vh;
+            img{
+                width: 20%;
+            }
+        }
+    }
+    .contact{
+        a{
+            font-size: 30px;
+            transform: rotate(90deg);
+        }
+    }
+}

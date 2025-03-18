@@ -1,0 +1,58 @@
+.services-html{
+    article{
+        figure{
+            background: $color3;
+            img{
+                animation-name: float;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+            }
+        }
+        .text{
+            h2, a{
+                color: $color2;
+            }
+        }
+    }
+}
+.services-css{
+    article{
+        figure{
+            background: $color1;
+            img{
+                animation-name: scale;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+            }
+        }
+        .text{
+            h2, a{
+                color: $color3;
+            }
+        }
+    }
+}
+.services-js{
+    article{
+        figure{
+            background: $color2;
+            img{
+                animation-name: rotate;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+            }
+        }
+        .text{
+            h2, a{
+                color: $color2
+            }
+        }
+    }
+}
+

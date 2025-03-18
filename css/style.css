@@ -47,7 +47,6 @@ section{
     top: 100px;
     z-index: 2;
 }
-
 .sticky{
     position: sticky;
     margin-top: 100px;
@@ -61,7 +60,7 @@ section{
 
 /* navegation */
 
-nav{
+ nav{
     position: fixed;
     width: 100%;
     height: 100px;
@@ -70,7 +69,7 @@ nav{
     font-size: 20px;
     z-index: 1;
 }
-nav ul{
+ nav ul{
     display: flex;
     align-items: center;
     width: 100%;
@@ -78,29 +77,29 @@ nav ul{
     margin: 0;
     padding: 0;
 }
-nav ul li{
+ nav ul li{
     list-style: none;
     margin-left: 45px;
 }
-nav ul li a{
+ nav ul li a{
     color: var(--color5);
     font-family: "Space Mono", monospace;
 }
 
 /* about section */
 
-.about .empty{
+ .about .empty{
     flex-basis: 37.5vw;
     background-color: var(--color4);
     border-radius: var(--border-radius);
     transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
-.about article{
+ .about article{
     flex: 1;
     display: flex;
     flex-direction: column;
 }
-.about article .title{
+ .about article .title{
     flex: 1;
     display: flex;
     align-items: flex-end;
@@ -109,7 +108,7 @@ nav ul li a{
     padding: var(--gutter);
     transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
-.about article .description{
+ .about article .description{
     flex: 1;
     display: flex;
     align-items: center;
@@ -121,11 +120,11 @@ nav ul li a{
 
 /*services section*/
 
-.services article{
+ .services article{
     display: flex;
     width: 100%;
 }
-.services figure{
+ .services figure{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,10 +135,10 @@ nav ul li a{
     max-width: 62.5vw;
     transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
-.services figure img{
+ .services figure img{
     width: 40%;
 }
-.services .text{
+ .services .text{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,27 +147,27 @@ nav ul li a{
     padding: var(--gutter);
     border-radius: var(--border-radius);
 }
-.services .text a{
+ .services .text a{
     font-family: "Space Mono", monospace;
 }
 
 /* service section animation */
 
-.services-html figure img{
+ .services-html figure img{
     animation-name: float;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.77,.28,.42,.93);
 }
-.services-css figure img{
+ .services-css figure img{
     animation-name: scale;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.77,.28,.42,.93);
 }
-.services-js figure img{
+ .services-js figure img{
     animation-name: rotate;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -205,44 +204,44 @@ nav ul li a{
 
 /* service section overrides */
 
-.services-html figure{
+ .services-html figure{
     background: var(--color3);
 }
-.services-html .text h2,
-.services-html .text a{
+ .services-html .text h2,
+ .services-html .text a{
     color: var(--color2);
 }
-.services-css figure{
+ .services-css figure{
 background: var(--color1);
 }
-.services-css .text h2,
-.services-css .text a{
+ .services-css .text h2,
+ .services-css .text a{
     color: var(--color3);
 }
-.services-js figure{
+ .services-js figure{
     background: var(--color2);
 }
-.services-js .text h2,
-.services-js .text a{
+ .services-js .text h2,
+ .services-js .text a{
     color: var(--color2);
 }
 
 /* contact section */
 
-.contact{
+ .contact{
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--color1), var(--color3) 60%, var(--color2) 70%, var(--color4));
     border-radius: var(--border-radius);
 }
 
-.contact a{
+ .contact a{
     font-size: 80px;
     color: var(--color6);
     font-weight: bold;
     transition: 2s cubic-bezier(.77,.28,.42,.93);
 }
-.contact a:hover{
+ .contact a:hover{
     color: var(--color5);
     filter:blur(20px);
 }
@@ -260,20 +259,20 @@ background: var(--color1);
  h2{
     font-size: 40px;
  }
- nav ul li{
+  nav ul li{
     margin-left: 25px;
  }
 
- .services article{
+  .services article{
     flex-direction: column;
  }
- .services figure{
+  .services figure{
     flex-basis: 25vh;
  }
- .services figure img{
+  .services figure img{
     width: 20%;
  }
- .contact a{
+  .contact a{
     font-size: 30px;
     transform: rotate(90deg);
  }
