@@ -6,8 +6,8 @@
 }
 
 html, body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #264653;
+  color: #E76F51;
   font-size: 20px;
   font-family: "Syne", sans-serif;
 }
@@ -19,12 +19,12 @@ h1 {
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 45px;
   margin: 0px;
 }
 
 a {
-  color: #FFFFFF;
+  color: #E76F51;
   text-decoration: none;
 }
 
@@ -59,10 +59,11 @@ section {
   justify-content: center;
   flex-basis: 56.25vw;
   margin: 0;
-  background: #d0ff94;
+  background: #E9C46A;
   border-radius: 100px;
   max-width: 62.5vw;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  min-width: 31.25vw;
 }
 .services article figure img {
   width: 40%;
@@ -72,9 +73,10 @@ section {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  background: #1f1a1c;
+  background: #734B5E;
   padding: 3.125vw 6.25vw;
   border-radius: 100px;
+  box-shadow: inset -17px 17px 17px #4e3340, inset 17px -17px 17px #98637c;
 }
 .services article .text a {
   font-family: "Space Mono", monospace;
@@ -100,8 +102,11 @@ section {
   0% {
     transform: rotate(0);
   }
+  50% {
+    transform: rotate(-5deg);
+  }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(5deg);
   }
 }
 body nav {
@@ -126,15 +131,17 @@ body nav ul li {
   margin-left: 45px;
 }
 body nav ul li a {
-  color: var(--color5);
+  color: #E76F51;
   font-family: "Space Mono", monospace;
 }
 
 .about .empty {
   flex-basis: 37.5vw;
-  background-color: #e5e5e5;
+  background-color: #F4A261;
   border-radius: 100px;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  min-width: 15.625vw;
+  box-shadow: inset -17px 17px 17px #a66e42, inset 17px -17px 17px #ffd680;
 }
 .about article {
   flex: 1;
@@ -145,23 +152,30 @@ body nav ul li a {
   flex: 1;
   display: flex;
   align-items: flex-end;
-  background-color: #1c47ff;
+  background-color: #2A9D8F;
   border-radius: 100px;
   padding: 3.125vw 6.25vw;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+}
+.about article .title h1 {
+  animation-name: float;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
 }
 .about article .description {
   flex: 1;
   display: flex;
   align-items: center;
-  background: #d6a3fb;
+  background: #BA7BA1;
   border-radius: 100px;
   padding: 3.125vw 6.25vw;
-  color: #000000;
+  color: #264653;
 }
 
 .services-html article figure {
-  background: #d0ff94;
+  background: #E9C46A;
 }
 .services-html article figure img {
   animation-name: float;
@@ -171,11 +185,11 @@ body nav ul li a {
   animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
 }
 .services-html article .text h2, .services-html article .text a {
-  color: #d6a3fb;
+  color: #BA7BA1;
 }
 
 .services-css article figure {
-  background: #1c47ff;
+  background: #2A9D8F;
 }
 .services-css article figure img {
   animation-name: scale;
@@ -185,38 +199,41 @@ body nav ul li a {
   animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
 }
 .services-css article .text h2, .services-css article .text a {
-  color: #d0ff94;
+  color: #E9C46A;
 }
 
 .services-js article figure {
-  background: #d6a3fb;
+  background: #BA7BA1;
 }
 .services-js article figure img {
   animation-name: rotate;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
 }
 .services-js article .text h2, .services-js article .text a {
-  color: #d6a3fb;
+  color: #BA7BA1;
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #e5e5e5);
+  background: linear-gradient(#2A9D8F, #E9C46A 60%, #BA7BA1 70%, #F4A261);
   border-radius: 100px;
 }
 .contact a {
   font-size: 80px;
-  color: #000000;
+  color: #264653;
   font-weight: bold;
   transition: 2s cubic-bezier(0.77, 0.28, 0.42, 0.93);
 }
 .contact a:hover {
-  color: #FFFFFF;
-  filter: blur(20px);
+  transition: 1s;
+  scale: 1.05;
+  color: #2A9D8F;
 }
 
 @media only screen and (max-width: 768px) {

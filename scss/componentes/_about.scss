@@ -4,6 +4,9 @@
         background-color: $color4;
         border-radius: nth($border-radius, 1);
         transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+        min-width: 15.625vw;
+        box-shadow: inset -17px 17px 17px #a66e42,
+            inset 17px -17px 17px #ffd680;
     }
     article{
         flex: 1;
@@ -17,6 +20,13 @@
             border-radius: nth($border-radius, 1);
             padding: nth($gutter, 1);
             transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+            h1{
+                animation-name: float;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+            }
         }
         .description{
             flex: 1;

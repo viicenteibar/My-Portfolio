@@ -19,7 +19,7 @@ h1{
     margin: 0px;
 }
 h2{
-    font-size: 60px;
+    font-size: 45px;
     margin: 0px;
 }
 a{
@@ -60,6 +60,7 @@ section{
             border-radius: nth($border-radius, 1);
             max-width: 62.5vw;
             transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+            min-width: 31.25vw;
             img{
                 width: 40%;
             }
@@ -72,6 +73,8 @@ section{
             background: $color7;
             padding: nth($gutter, 1);;
             border-radius: nth($border-radius, 1);
+            box-shadow: inset -17px 17px 17px #4e3340,
+            inset 17px -17px 17px #98637c;
             a{
                 font-family: "Space Mono", monospace;
             }
@@ -99,7 +102,10 @@ section{
     0%{
         transform: rotate(0);
     }
+    50%{
+        transform: rotate(-5deg);
+    }
     100%{
-        transform: rotate(180deg);
+        transform: rotate(5deg);
     }
 }

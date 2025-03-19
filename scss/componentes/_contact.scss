@@ -1,4 +1,6 @@
 .contact{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient($color1, $color3 60%, $color2 70%, $color4);
@@ -9,8 +11,9 @@
         font-weight: bold;
         transition: 2s cubic-bezier(.77,.28,.42,.93);
         &:hover{
-            color: $color5;
-            filter:blur(20px);
+            transition: 1s;
+            scale: 1.05;
+            color: $color1;
         }
     }
 }
