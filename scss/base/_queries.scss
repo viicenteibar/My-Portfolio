@@ -1,8 +1,29 @@
-@media only screen and (max-width: 768px){
-    html, body{
-        border-radius: nth($border-radius, 2);
-        padding: nth($gutter, 2);
+@media screen and (max-width: 1300px){
+    .contact{
+        a{
+            font-size: 45px;
+        }
+        img{
+            width: 5%;
+        }
     }
+}
+@media screen and (max-width: 1127px){
+    .services{
+        article{
+            flex-direction: column;
+            figure{
+                flex-basis: 25vh;
+                min-width: 100%;
+                min-height: 40%;
+                img{
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
     h1{
         font-size: 60px;
     }
@@ -16,21 +37,42 @@
             }
         }
     }
-    .services{
-        article{
-            flex-direction: column;
-        }
-        figure{
-            flex-basis: 25vh;
-            img{
-                width: 20%;
-            }
-        }
-    }
     .contact{
         a{
             font-size: 30px;
             transform: rotate(90deg);
+        }
+        img{
+            display: none;
+        }
+
+    }
+}
+@media screen and (max-width: 545px){
+    .about{
+        .empty{
+            display: none;
+        }
+        article{
+            .title{
+                padding-bottom: 50px;
+                max-height: 45%;
+            }
+            .description{
+                box-shadow: inset -17px 17px 17px #7d526c,
+            inset 17px -17px 17px #f7a4d6;
+            }
+        }
+    }
+}
+@media screen and (max-width: 420px){
+    body{
+        nav{
+            ul{
+                li{
+                    margin-left: 30px;
+                }
+            }
         }
     }
 }

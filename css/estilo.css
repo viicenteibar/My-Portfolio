@@ -236,11 +236,28 @@ body nav ul li a {
   color: #2A9D8F;
 }
 
-@media only screen and (max-width: 768px) {
-  html, body {
-    border-radius: 50px;
-    padding: 6.35vw;
+@media screen and (max-width: 1300px) {
+  .contact a {
+    font-size: 45px;
   }
+  .contact img {
+    width: 5%;
+  }
+}
+@media screen and (max-width: 1127px) {
+  .services article {
+    flex-direction: column;
+  }
+  .services article figure {
+    flex-basis: 25vh;
+    min-width: 100%;
+    min-height: 40%;
+  }
+  .services article figure img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 60px;
   }
@@ -250,18 +267,29 @@ body nav ul li a {
   nav ul li {
     margin-left: 25px;
   }
-  .services article {
-    flex-direction: column;
-  }
-  .services figure {
-    flex-basis: 25vh;
-  }
-  .services figure img {
-    width: 20%;
-  }
   .contact a {
     font-size: 30px;
     transform: rotate(90deg);
+  }
+  .contact img {
+    display: none;
+  }
+}
+@media screen and (max-width: 545px) {
+  .about .empty {
+    display: none;
+  }
+  .about article .title {
+    padding-bottom: 50px;
+    max-height: 45%;
+  }
+  .about article .description {
+    box-shadow: inset -17px 17px 17px #7d526c, inset 17px -17px 17px #f7a4d6;
+  }
+}
+@media screen and (max-width: 420px) {
+  body nav ul li {
+    margin-left: 30px;
   }
 }
 
