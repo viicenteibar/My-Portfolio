@@ -58,10 +58,6 @@
                 padding-bottom: 50px;
                 max-height: 45%;
             }
-            .description{
-                box-shadow: inset -17px 17px 17px #7d526c,
-            inset 17px -17px 17px #f7a4d6;
-            }
         }
     }
     body{
@@ -89,6 +85,22 @@
         article{
             figure{
                 min-height: 30%;
+            }
+        }
+    }
+}
+@media screen and (max-height: 668px){
+    .description{
+        p{
+            font-size: 16px;
+        }
+    }
+    .services{
+        article{
+            .text{
+                p{
+                    font-size: 16px;
+                }
             }
         }
     }

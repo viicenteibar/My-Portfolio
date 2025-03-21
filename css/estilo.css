@@ -288,9 +288,6 @@ body nav ul li a {
     padding-bottom: 50px;
     max-height: 45%;
   }
-  .about article .description {
-    box-shadow: inset -17px 17px 17px #7d526c, inset 17px -17px 17px #f7a4d6;
-  }
   body nav ul li {
     margin-left: 20px;
     font-size: 18px;
@@ -302,6 +299,14 @@ body nav ul li a {
   }
   .services article figure {
     min-height: 30%;
+  }
+}
+@media screen and (max-height: 668px) {
+  .description p {
+    font-size: 16px;
+  }
+  .services article .text p {
+    font-size: 16px;
   }
 }
 
