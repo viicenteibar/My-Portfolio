@@ -1,12 +1,12 @@
 .about{
-    .empty{
+    .empty {
         flex-basis: 37.5vw;
-        background-color: $color1;
+        background-color: rgba($color1, 0.6);
         border-radius: nth($border-radius, 1);
         transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
         min-width: 15.625vw;
-        box-shadow: inset -20px 20px 17px #799d42,
-        inset 20px -20px 17px #fbff8a;
+        box-shadow: inset -20px 20px 17px rgba(121, 157, 66, 0.5),
+                    inset 20px -20px 17px rgba(251, 255, 138, 0.5);
     }
     article{
         flex: 1;
@@ -16,7 +16,7 @@
             flex: 1;
             display: flex;
             align-items: flex-end;
-            background-color: $color2;
+            background-color: rgba($color2, 0.8);
             border-radius: nth($border-radius, 1);
             padding: nth($gutter, 1);
             transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);

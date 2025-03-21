@@ -20,6 +20,10 @@ body{
                 a{
                     color: $color4;
                     font-family: "Space Mono", monospace;
+                    transition: .5s;
+                    &:hover{
+                        -webkit-text-stroke: .5px white;
+                    }
                 }
             }
         }

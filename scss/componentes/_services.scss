@@ -16,6 +16,12 @@
             h2, a{
                 color: $color5;
             }
+            a{
+                transition: .5s;
+                &:hover{
+                    -webkit-text-stroke: .5px white;
+                }
+            }
         }
     }
 }
@@ -37,6 +43,12 @@
             h2, a{
                 color: $color3;
             }
+            a{
+                transition: .5s;
+                &:hover{
+                    -webkit-text-stroke: .5px white;
+                }
+            }
         }
     }
 }
@@ -57,6 +69,12 @@
         .text{
             h2, a{
                 color: $color2
+            }
+            a{
+                transition: .5s;
+                &:hover{
+                    -webkit-text-stroke: .5px white;
+                }
             }
         }
     }

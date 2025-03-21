@@ -6,10 +6,19 @@
 }
 
 html, body {
-  background-color: #0D0D0D;
   color: #D6F272;
   font-size: 20px;
   font-family: "Syne", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -109,6 +118,14 @@ section {
     transform: rotate(5deg);
   }
 }
+@keyframes hi {
+  0% {
+    background-position: 0px 220px, 3px 220px, 151.5px 337.5px, 25px 24px, 28px 24px, 176.5px 150px, 50px 16px, 53px 16px, 201.5px 91px, 75px 224px, 78px 224px, 226.5px 350.5px, 100px 19px, 103px 19px, 251.5px 121px, 125px 120px, 128px 120px, 276.5px 187px, 150px 31px, 153px 31px, 301.5px 120.5px, 175px 235px, 178px 235px, 326.5px 384.5px, 200px 121px, 203px 121px, 351.5px 228.5px, 225px 224px, 228px 224px, 376.5px 364.5px, 250px 26px, 253px 26px, 401.5px 105px, 275px 75px, 278px 75px, 426.5px 180px;
+  }
+  to {
+    background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px, 25px 13632px, 28px 13632px, 176.5px 13758px, 50px 5416px, 53px 5416px, 201.5px 5491px, 75px 17175px, 78px 17175px, 226.5px 17301.5px, 100px 5119px, 103px 5119px, 251.5px 5221px, 125px 8428px, 128px 8428px, 276.5px 8495px, 150px 9876px, 153px 9876px, 301.5px 9965.5px, 175px 13391px, 178px 13391px, 326.5px 13540.5px, 200px 14741px, 203px 14741px, 351.5px 14848.5px, 225px 18770px, 228px 18770px, 376.5px 18910.5px, 250px 5082px, 253px 5082px, 401.5px 5161px, 275px 6375px, 278px 6375px, 426.5px 6480px;
+  }
+}
 body nav {
   position: fixed;
   width: 100%;
@@ -133,15 +150,19 @@ body nav ul li {
 body nav ul li a {
   color: #D6F272;
   font-family: "Space Mono", monospace;
+  transition: 0.5s;
+}
+body nav ul li a:hover {
+  -webkit-text-stroke: 0.5px white;
 }
 
 .about .empty {
   flex-basis: 37.5vw;
-  background-color: #BAF266;
+  background-color: rgba(186, 242, 102, 0.6);
   border-radius: 100px;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
   min-width: 15.625vw;
-  box-shadow: inset -20px 20px 17px #799d42, inset 20px -20px 17px #fbff8a;
+  box-shadow: inset -20px 20px 17px rgba(121, 157, 66, 0.5), inset 20px -20px 17px rgba(251, 255, 138, 0.5);
 }
 .about article {
   flex: 1;
@@ -152,7 +173,7 @@ body nav ul li a {
   flex: 1;
   display: flex;
   align-items: flex-end;
-  background-color: #595959;
+  background-color: rgba(89, 89, 89, 0.8);
   border-radius: 100px;
   padding: 3.125vw 6.25vw;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
@@ -190,6 +211,12 @@ body nav ul li a {
 .services-html article .text h2, .services-html article .text a {
   color: #64734E;
 }
+.services-html article .text a {
+  transition: 0.5s;
+}
+.services-html article .text a:hover {
+  -webkit-text-stroke: 0.5px white;
+}
 
 .services-css article figure {
   background: #595959;
@@ -204,6 +231,12 @@ body nav ul li a {
 }
 .services-css article .text h2, .services-css article .text a {
   color: #6F8C42;
+}
+.services-css article .text a {
+  transition: 0.5s;
+}
+.services-css article .text a:hover {
+  -webkit-text-stroke: 0.5px white;
 }
 
 .services-js article figure {
@@ -220,25 +253,51 @@ body nav ul li a {
 .services-js article .text h2, .services-js article .text a {
   color: #595959;
 }
+.services-js article .text a {
+  transition: 0.5s;
+}
+.services-js article .text a:hover {
+  -webkit-text-stroke: 0.5px white;
+}
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(#BAF266, #6F8C42 60%, #595959 70%, #D6F272);
   border-radius: 100px;
+  overflow: hidden;
 }
-.contact a {
-  font-size: 80px;
-  color: #D6F272;
-  font-weight: bold;
-  transition: 2s cubic-bezier(0.77, 0.28, 0.42, 0.93);
+.contact .container-contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --c: rgb(186, 242, 102);
+  background-color: #000;
+  background-image: radial-gradient(4px 100px at 0px 235px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 235px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 252px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 252px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 150px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 150px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 253px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 253px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 204px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 204px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 134px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 134px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 179px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 179px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 299px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 299px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 215px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 215px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 281px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 281px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 158px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 158px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, rgba(0, 0, 0, 0) 150%), radial-gradient(4px 100px at 0px 210px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(4px 100px at 300px 210px, var(--c), rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, rgba(0, 0, 0, 0) 150%);
+  background-size: 300px 235px, 300px 235px, 300px 235px, 300px 252px, 300px 252px, 300px 252px, 300px 150px, 300px 150px, 300px 150px, 300px 253px, 300px 253px, 300px 253px, 300px 204px, 300px 204px, 300px 204px, 300px 134px, 300px 134px, 300px 134px, 300px 179px, 300px 179px, 300px 179px, 300px 299px, 300px 299px, 300px 299px, 300px 215px, 300px 215px, 300px 215px, 300px 281px, 300px 281px, 300px 281px, 300px 158px, 300px 158px, 300px 158px, 300px 210px, 300px 210px, 300px 210px;
+  animation: hi 150s linear infinite;
 }
-.contact a:hover {
-  transition: 1s;
-  scale: 1.05;
-  color: #64734E;
+.contact .container-contact:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: blur(1em) brightness(6);
+  background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 2px, hsl(0, 0%, 4%) 2px);
+  background-size: 8px 8px;
+}
+.contact .container-contact a {
+  display: inline-block;
+  text-align: center;
+}
+.contact .container-contact a img {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  transition: 0.5s;
+}
+.contact .container-contact a img:hover {
+  transform: scale(1.3);
 }
 
 @media screen and (max-width: 1300px) {
