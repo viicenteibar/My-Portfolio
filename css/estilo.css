@@ -385,9 +385,12 @@ body nav ul li a:hover {
     min-height: 30%;
   }
 }
-@media screen and (max-height: 668px) {
+@media screen and (max-height: 781px) {
   .description p {
     font-size: 16px;
+  }
+  .services article .text h2 {
+    font-size: 33px;
   }
   .services article .text p {
     font-size: 16px;
