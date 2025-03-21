@@ -1,12 +1,12 @@
 .about{
     .empty{
         flex-basis: 37.5vw;
-        background-color: $color4;
+        background-color: $color1;
         border-radius: nth($border-radius, 1);
         transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
         min-width: 15.625vw;
-        box-shadow: inset -17px 17px 17px #a66e42,
-            inset 17px -17px 17px #ffd680;
+        box-shadow: inset -20px 20px 17px #799d42,
+        inset 20px -20px 17px #fbff8a;
     }
     article{
         flex: 1;
@@ -16,10 +16,12 @@
             flex: 1;
             display: flex;
             align-items: flex-end;
-            background-color: $color1;
+            background-color: $color2;
             border-radius: nth($border-radius, 1);
             padding: nth($gutter, 1);
             transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+            box-shadow: inset -20px 20px 17px #3a3a3a,
+            inset 20px -20px 17px #787878;
             h1{
                 animation-name: float;
                 animation-duration: 1s;
@@ -32,10 +34,12 @@
             flex: 1;
             display: flex;
             align-items: center;
-            background: $color2;
+            background: $color5;
             border-radius: nth($border-radius, 1);
             padding: nth($gutter, 1);
-            color: $color6;
+            color: $color4;
+            box-shadow: inset -20px 20px 17px #414b33,
+            inset 20px -20px 17px #879b69;
         }
     }
 }

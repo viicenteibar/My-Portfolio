@@ -7,13 +7,13 @@
     border-radius: nth($border-radius, 1);
     a{
         font-size: 80px;
-        color: $color6;
+        color: $color4;
         font-weight: bold;
         transition: 2s cubic-bezier(.77,.28,.42,.93);
         &:hover{
             transition: 1s;
             scale: 1.05;
-            color: $color1;
+            color: $color5;
         }
     }
 }

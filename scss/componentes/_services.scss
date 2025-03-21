@@ -2,6 +2,8 @@
     article{
         figure{
             background: $color3;
+            box-shadow: inset -20px 20px 17px #485b2b,
+            inset 20px -20px 17px #96bd59;
             img{
                 animation-name: float;
                 animation-duration: 1s;
@@ -12,7 +14,7 @@
         }
         .text{
             h2, a{
-                color: $color2;
+                color: $color5;
             }
         }
     }
@@ -20,7 +22,9 @@
 .services-css{
     article{
         figure{
-            background: $color1;
+            background: $color2;
+            box-shadow: inset -20px 20px 17px #3a3a3a,
+            inset 20px -20px 17px #787878;
             img{
                 animation-name: scale;
                 animation-duration: 1s;
@@ -39,7 +43,9 @@
 .services-js{
     article{
         figure{
-            background: $color2;
+            background: $color5;
+            box-shadow: inset -20px 20px 17px #414b33,
+            inset 20px -20px 17px #879b69;
             img{
                 animation-name: rotate;
                 animation-duration: 2s;
