@@ -300,14 +300,6 @@ body nav ul li a:hover {
   transform: scale(1.3);
 }
 
-@media screen and (max-width: 1300px) {
-  .contact a {
-    font-size: 45px;
-  }
-  .contact img {
-    width: 5%;
-  }
-}
 @media screen and (max-width: 1127px) {
   .services article {
     flex-direction: column;
@@ -331,12 +323,45 @@ body nav ul li a:hover {
   nav ul li {
     margin-left: 25px;
   }
-  .contact a {
-    font-size: 30px;
-    transform: rotate(90deg);
+  .contact .container-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "instagram github" "facebook correo" "linkedin whatsapp";
   }
-  .contact img {
-    display: none;
+  .contact .container-contact .instagram {
+    justify-self: end;
+    align-self: end;
+    grid-area: instagram;
+  }
+  .contact .container-contact .linkedin {
+    justify-self: end;
+    align-self: start;
+    grid-area: linkedin;
+  }
+  .contact .container-contact .github {
+    justify-self: start;
+    align-self: end;
+    grid-area: github;
+  }
+  .contact .container-contact .correo {
+    justify-self: start;
+    align-self: center;
+    grid-area: correo;
+  }
+  .contact .container-contact .whatsapp {
+    justify-self: start;
+    align-self: start;
+    grid-area: whatsapp;
+  }
+  .contact .container-contact .facebook {
+    justify-self: end;
+    align-self: center;
+    grid-area: facebook;
+  }
+  .contact .container-contact a img {
+    width: 60%;
   }
 }
 @media screen and (max-width: 545px) {
